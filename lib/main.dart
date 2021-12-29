@@ -21,12 +21,12 @@ class ProductApp extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Image(image: AssetImage('assets/icon.png')),
+                    Container(margin: const EdgeInsets.only(bottom: 50), child: const Image(image: AssetImage('assets/icon.png'))),
                     ElevatedButton(
                         onPressed: () => {print("Button Pressed")},
-                        child: Text('Caadstrar Produto'),
+                        child: const Text('Caadstrar Produto'),
                         style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(20),
                           primary: Colors.orange,
                         ))
                   ],
