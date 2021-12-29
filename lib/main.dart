@@ -11,6 +11,7 @@ class ProductApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -18,14 +19,18 @@ class ProductApp extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.all(20),
-                    primary: Colors.orange
-                  ),
-                  onPressed: () => {print("Button Pressed")},
-                  child: Text('Caadstrar Produto'),
-                )
+                Column(
+                  children: [
+                    Image(image: AssetImage('assets/icon.png')),
+                    ElevatedButton(
+                        onPressed: () => {print("Button Pressed")},
+                        child: Text('Caadstrar Produto'),
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.all(20),
+                          primary: Colors.orange,
+                        ))
+                  ],
+                ),
               ],
             )
           ],
