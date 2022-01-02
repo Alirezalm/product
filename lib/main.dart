@@ -28,7 +28,6 @@ class ProductApp extends StatelessWidget {
                       child: const Image(image: AssetImage('assets/icon.png'))),
                   ElevatedButton(
                       onPressed: () {
-                        print("Button Pressed");
                         Navigator.push(
                           context,
                           MaterialPageRoute(
