@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product/product.dart';
 
 class RegisterProduct extends StatelessWidget {
   var nameController = TextEditingController();
@@ -70,9 +71,17 @@ class RegisterProduct extends StatelessWidget {
               child: Center(
                 child: ElevatedButton(
                     onPressed: () {
-                      print(nameController.text);
-                      print(desController.text);
-                      print(priceController.text);
+                      var product = Product(
+                        name: nameController.text,
+                        description: desController.text,
+                        price: priceController.text,
+                      );
+                      nameController.text = "";
+                      desController.text = "";
+                      priceController.text = "";
+                      // print(product.name);
+                      // print(product.description);
+                      // print(product.price);
                     },
                     child: const Text('Enviar'),
                     style: ElevatedButton.styleFrom(
