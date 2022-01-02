@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class RegisterProduct extends StatelessWidget {
+  var nameController = TextEditingController();
+  var desController = TextEditingController();
+  var priceController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,9 +21,10 @@ class RegisterProduct extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 50),
-              child: const TextField(
+              child: TextField(
+                controller: nameController,
                 textAlign: TextAlign.left,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Nome: ",
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -31,9 +36,10 @@ class RegisterProduct extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 25),
-              child: const TextField(
+              child: TextField(
+                controller: desController,
                 textAlign: TextAlign.left,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Descrição: ",
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -45,9 +51,10 @@ class RegisterProduct extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 25),
-              child: const TextField(
+              child: TextField(
+                controller: priceController,
                 textAlign: TextAlign.left,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Valor: ",
                   hintText: "R\$ 0,00",
                   enabledBorder: OutlineInputBorder(
@@ -59,10 +66,14 @@ class RegisterProduct extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 20),
+              margin: const EdgeInsets.symmetric(vertical: 20),
               child: Center(
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      print(nameController.text);
+                      print(desController.text);
+                      print(priceController.text);
+                    },
                     child: const Text('Enviar'),
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(horizontal: 100),
