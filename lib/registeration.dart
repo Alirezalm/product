@@ -52,7 +52,8 @@ class RegisterProduct extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 25),
-              child: TextField(
+                child: TextField(
+                  keyboardType: TextInputType.number,
                 controller: priceController,
                 textAlign: TextAlign.left,
                 decoration: const InputDecoration(
