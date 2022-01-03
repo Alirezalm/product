@@ -91,7 +91,7 @@ class _RegisterProductState extends State<RegisterProduct> {
                       );
                       Future<String> createProduct(Product product) async {
                         final response = await http.post(
-                          Uri.parse('http://192.168.5.176:8000/products/'),
+                          Uri.parse('http://192.168.5.176:8000/products/'), // insert your ip
                           headers: <String, String>{
                             'Content-Type': 'application/json; charset=UTF-8',
                           },
@@ -124,13 +124,13 @@ class _RegisterProductState extends State<RegisterProduct> {
               ),
             ),
             Container(
-              color: Colors.orange,
+              color: Colors.white,
               padding: EdgeInsets.all(10),
               child: Center(
                 child: Text(message,
                     style: const TextStyle(
                       fontSize: 24,
-                      color: Colors.white,
+                      color: Colors.grey,
                     )),
               ),
             ),
